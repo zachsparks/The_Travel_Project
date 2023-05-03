@@ -1,75 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Travel Assistant</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Vacation Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    } 
+    fieldset {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    legend {
+      font-weight: bold;
+      padding: 5px;
+    }
+  </style>
 </head>
+
 <body>
-    
-    <header>Travel Assistant</header>
-    
-	<form action="submit-form.php" method="post">
-		<label for="destination">Destination:</label><br>
-		<input type="text" id="destination" name="destination"><br>
+  <header>
+    Vacation Planner
+  </header>
+  <h1>Enter your vacation information:</h1>
+  <form action="/submit" method="post">
+    <fieldset>
+      <legend>General Information</legend>
+      <!-- General Information Form Elements -->
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination"><br><br>
 
-		<label for="start_date">Start Date:</label><br>
-		<input type="date" id="start_date" name="start_date"><br>
+      <label for="start_date">Start Date:</label>
+      <input type="date" id="start_date" name="start_date"><br><br>
 
-		<label for="end_date">End Date:</label><br>
-		<input type="date" id="end_date" name="end_date"><br>
+      <label for="end_date">End Date:</label>
+      <input type="date" id="end_date" name="end_date"><br><br>
 
-		<label for="budget">Budget:</label><br>
-		<input type="number" id="budget" name="budget"><br>
+      <label for="budget">Budget:</label>
+      <input type="number" id="budget" name="budget"><br><br>
 
-		<label for="budget_currency">Budget Currency:</label><br>
-		<input type="text" id="budget_currency" name="budget_currency"><br>
+      <label for="budget_currency">Budget Currency:</label>
+      <select id="budget_currency" name="budget_currency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
 
-		<label for="Number_of_people">Number of People:</label><br>
-		<input type="number" id="Number_of_people" name="Number_of_people"><br>
+      </select><br><br>
 
-		<label for="origin">Origin:</label><br>
-		<input type="text" id="origin" name="origin"><br>
+      <label for="Number_of_people">Number of People:</label>
+      <input type="number" id="Number_of_people" name="number_of_people"><br><br>
+    </fieldset>
 
-		<label for="misc_info">Miscellaneous Information:</label><br>
-		<textarea id="misc_info" name="misc_info"></textarea><br>
+    <fieldset>
+      <legend>Flight Information</legend>
+      <!-- Flight Information Form Elements -->
+      <label for="origin">Origin:</label>
+      <input type="text" id="origin" name="origin"><br><br>
 
-		<h3>Flight</h3>
+      <label for="flight_class">Flight Class:</label>
+      <select id="flight_class" name="flight_class">
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+        <option value="first">First Class</option>
+      </select><br><br>
 
-		<label for="flight_class">Flight Class:</label><br>
-		<input type="text" id="flight_class" name="flight_class"><br>
+      <label for="flight_type">Flight Type:</label>
+      <select id="flight_type" name="flight_type">
+        <option value="one-way">One-Way</option>
+        <option value="round-trip">Round-Trip</option>
+      </select><br><br>
 
-		<label for="flight_type">Flight Type:</label><br>
-		<input type="text" id="flight_type" name="flight_type"><br>
+      <label for="flight_stop">Flight Stop:</label>
+      <select id="flight_stop" name="flight_stop">
+        <option value="nonstop">Nonstop</option>
+        <option value="1stop">1 Stop</option>
+        <option value="2stop">2 Stops</option>
+      </select><br><br>
+    </fieldset>
 
-		<label for="flight_stop">Flight Stop:</label><br>
-		<input type="number" id="flight_stop" name="flight_stop"><br>
+    <fieldset>
+      <legend>Hotel Information</legend>
+      <!-- Hotel Information Form Elements -->
+      <label for="hotel-class">Hotel Class</label>
+      <select class="form-control" id="hotel-class" name="hotel_class">
+        <option value="any">Any</option>
+        <option value="budget">Budget</option>
+        <option value="mid-range">Mid-Range</option>
+        <option value="luxury">Luxury</option>
+      </select><br><br>
 
-		<label for="flight_airline">Flight Airline:</label><br>
-		<input type="text" id="flight_airline" name="flight_airline"><br>
+      <label for="hotel-amenity">Hotel Amenity</label>
+      <input type="text" id="hotel-amenity" name="hotel_amenity"><br><br>
 
-		<h3>Hotel</h3>
-		<label for="hotel_class">Hotel Class:</label><br>
-		<input type="text" id="hotel_class" name="hotel_class"><br>
-
-		<label for="hotel_type">Hotel Type:</label><br>
-		<input type="text" id="hotel_type" name="hotel_type"><br>
-
-		<label for="hotel_amenity">Hotel Amenity:</label><br>
-		<input type="text" id="hotel_amenity" name="hotel_amenity"><br>
-
-		<h3>Activities</h3>
-		<label for="additional_activities">Additional Activities:</label><br>
-		<textarea id="additional_activities" name="additional_activities"></textarea><br>
-
-        <h3>Additional Requirements</h3>
-		<label for="free_text">Additional Requirements:</label><br>
-		<textarea id="free_text" name="free_text"></textarea><br>
-
-		<input type="submit" value="Submit">
-	</form>
-    <footer>&copy; 2023 The Travel Project</footer>
-    <script src="script.js"></script>
+    </fieldset>
+      
+    <fieldset>
+        <legend>Additional Information</legend>
+        <!-- Additional Information Form Elements -->
+        <label for="misc_info">Miscellaneous Info:</label>
+        <textarea id="misc_info" name="misc_info"></textarea><br><br>
+    </fieldset>
+    <form action="/submit" method="post">
+      <button type="submit">Submit</button>
+    </form>
+  </form>
 </body>
-</html>
-
+	
 		
