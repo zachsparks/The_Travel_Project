@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>Travel Assistant</header>
+    
+	<form action="submit-form.php" method="post">
+		<label for="destination">Destination:</label><br>
+		<input type="text" id="destination" name="destination"><br>
+
+		<label for="start_date">Start Date:</label><br>
+		<input type="date" id="start_date" name="start_date"><br>
+
+		<label for="end_date">End Date:</label><br>
+		<input type="date" id="end_date" name="end_date"><br>
+
+		<label for="budget">Budget:</label><br>
+		<input type="number" id="budget" name="budget"><br>
+
+		<label for="budget_currency">Budget Currency:</label><br>
+		<input type="text" id="budget_currency" name="budget_currency"><br>
+
+		<label for="Number_of_people">Number of People:</label><br>
+		<input type="number" id="Number_of_people" name="Number_of_people"><br>
+
+		<label for="origin">Origin:</label><br>
+		<input type="text" id="origin" name="origin"><br>
+
+		<label for="misc_info">Miscellaneous Information:</label><br>
+		<textarea id="misc_info" name="misc_info"></textarea><br>
+
+		<h3>Flight</h3>
+
+		<label for="flight_class">Flight Class:</label><br>
+		<input type="text" id="flight_class" name="flight_class"><br>
+
+		<label for="flight_type">Flight Type:</label><br>
+		<input type="text" id="flight_type" name="flight_type"><br>
+
+		<label for="flight_stop">Flight Stop:</label><br>
+		<input type="number" id="flight_stop" name="flight_stop"><br>
+
+		<label for="flight_airline">Flight Airline:</label><br>
+		<input type="text" id="flight_airline" name="flight_airline"><br>
+
+		<h3>Hotel</h3>
+		<label for="hotel_class">Hotel Class:</label><br>
+		<input type="text" id="hotel_class" name="hotel_class"><br>
+
+		<label for="hotel_type">Hotel Type:</label><br>
+		<input type="text" id="hotel_type" name="hotel_type"><br>
+
+		<label for="hotel_amenity">Hotel Amenity:</label><br>
+		<input type="text" id="hotel_amenity" name="hotel_amenity"><br>
+
+		<h3>Activities</h3>
+		<label for="additional_activities">Additional Activities:</label><br>
+		<textarea id="additional_activities" name="additional_activities"></textarea><br>
+
+        <h3>Additional Requirements</h3>
+		<label for="free_text">Additional Requirements:</label><br>
+		<textarea id="free_text" name="free_text"></textarea><br>
+
+		<input type="submit" value="Submit">
+	</form>
+    <footer>&copy; 2023 The Travel Project</footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+		

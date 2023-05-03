@@ -1,0 +1,123 @@
+header {
+    background-color: #2f2f2f;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+header.hide {
+    transform: translateY(-100%);
+}
+
+img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8a8a8a;
+    margin-top: 150px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 80%;
+    margin: 50px auto;
+    border: 5px solid #050505af;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #425042;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="number"], input[type="date"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #c2c7c4;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="submit"] {
+    background-color: #050505af;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #044f68;
+    color: #fff;
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* optional styling for form elements */
+#destination {
+    text-transform: capitalize;
+}
+
+#misc_info, #additional_activities, #free_text {
+    resize: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  footer.hide {
+    transform: translateY(100%);
+  }
